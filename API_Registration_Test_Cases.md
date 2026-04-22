@@ -1,6 +1,6 @@
 # Ручное тестирование API (Project: QA Sandbox)
 
-В данном документе представлены тест-кейсы для ручного тестирования API эндпоинтов.
+В данном документе представлены тест-кейсы для ручного тестирования API эндпоинтa `/api/auth/register`.
 Объект тестирования: [QA Automation Sandbox](https://github.com/manikosto/qa-automation-sandbox)
 
 # Примечание: 
