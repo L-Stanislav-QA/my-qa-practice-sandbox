@@ -1,2 +1,2 @@
 # my-qa-practice-sandbox
-Collection of tests
+Collection of tests and QA theory
