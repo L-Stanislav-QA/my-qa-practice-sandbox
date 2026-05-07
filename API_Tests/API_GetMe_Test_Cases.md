@@ -89,7 +89,7 @@
     4. Нажать кнопку **Send**
 
 * **Ожидаемый результат:** 
-    * Статус: `401 Unauthorized`
+    * Статус: `403 Unauthorized`
     * Тело ответа:
     ```json
     {
@@ -109,12 +109,14 @@
     4. Нажать кнопку **Send**
 
 * **Ожидаемый результат:** 
-    * Статус: `401 Unauthorized` или `403 Forbidden`
+    * Статус: `401 Unauthorized` 
     * Тело ответа:
     ```json
     {
-        "detail": "Could not validate credentials"
-    }
+    "detail": "Invalid or expired token",
+    "error_code": "UNAUTHORIZED",
+    "status_code": 401
+    }   
     ```
     *Примечание: Точное сообщение может варьироваться, но статус должен быть 401 или 403.*
 
@@ -135,8 +137,10 @@
     * Тело ответа:
     ```json
     {
-        "detail": "Token has expired"
-    }
+    "detail": "Invalid or expired token",
+    "error_code": "UNAUTHORIZED",
+    "status_code": 401
+    }   
     ```
 
 --- 
@@ -157,7 +161,9 @@
     * Тело ответа:
     ```json
     {
-        "detail": "Token has been revoked"
+    "detail": "Invalid or expired token",
+    "error_code": "UNAUTHORIZED",
+    "status_code": 401
     }
     ```
     *Примечание: Сообщение может отличаться, но доступ должен быть запрещен.*
